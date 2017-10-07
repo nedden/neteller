@@ -24,7 +24,8 @@ module Neteller
               returnKeys: [],
               uri: @redirects_cancel
             }
-          ]
+          ],
+          paymentMethods: @payment_methods || []
         }
       }
     end
