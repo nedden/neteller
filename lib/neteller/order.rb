@@ -25,6 +25,7 @@ module Neteller
               uri: @redirects_cancel
             }
           ],
+          items: @items || [],
           paymentMethods: @payment_methods || []
         }
       }
