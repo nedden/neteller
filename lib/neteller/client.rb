@@ -23,6 +23,7 @@ module Neteller
 
     def pay!(order)
       response = self.class.post("#{@base_uri}/v1/orders", :body => order.to_h.to_json, :headers => headers )
+      raise response.inspect if response.key? 'error'
       Response.new(response).to_h
     end
 
